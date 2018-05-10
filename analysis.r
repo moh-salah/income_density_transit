@@ -78,6 +78,7 @@ map_transit <- ggplot(data= data_transit) +
 
 #make it interactive with plotly
 maply_transit <- ggplotly(map_transit) %>%
+  layout(xaxis = list(scaleanchor = "y", scaleratio = 1)) %>%
   highlight(on="plotly_click", color = "blue", off= "plotly_relayout")
 
 #create a scatter plot of income and density
